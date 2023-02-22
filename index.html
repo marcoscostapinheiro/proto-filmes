@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto Filmes</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <span class="material-symbols-outlined" id="icon-menu" onclick="reveal(menu, options)">menu</span>  
+            <div id="options">
+                <ul>
+                    <li>TESTE</li>
+                    <li>TESTE</li>
+                    <li>TESTE</li>
+                    <li>TESTE</li>
+                </ul>
+            </div>
+        </nav>
+        <h1>PROTO FILMES</h1>
+        <div id="text-box">
+                <label for="isearch" class="material-symbols-outlined" id="ilabel" onclick="reveal(label, input)">search</label>
+                <input type="text" name="search" id="isearch" placeholder="Buscar...">
+        </div>
+    </header>
+
+    <main>
+        <video src="images/Proto_Filmes.mp4" controls></video>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
