@@ -15,8 +15,12 @@ header{
 }
 
 header > h1{
-    color: lightgray;
-    margin-left: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
+    color: white;
+    width: 250px;
 }
 
 #options{
@@ -42,11 +46,6 @@ header > h1{
 
 li{
     padding: 10px;
-}
-
-#text-box{
-    width: 172px;
-    margin: 0 5px 0 -85px;
 }
 
 .material-symbols-outlined{
