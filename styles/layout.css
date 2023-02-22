@@ -17,7 +17,6 @@ header{
 header > h1{
     color: lightgray;
     margin-left: 50px;
-    width: 100%;
 }
 
 #options{
@@ -47,7 +46,7 @@ li{
 
 #text-box{
     width: 172px;
-    margin: 0 5px 0 -365px;
+    margin: 0 5px 0 -85px;
 }
 
 .material-symbols-outlined{
