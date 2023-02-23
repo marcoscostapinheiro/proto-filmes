@@ -107,6 +107,7 @@ section{
 
 #em-alta{
     margin-top: 80px;
+    overflow-x: auto;
 }
 
 #em-alta > h2{
