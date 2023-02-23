@@ -18,7 +18,7 @@ header > h1{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    margin: auto;
+    margin: 5px 0px 0px 7px;
     color: white;
     width: 250px;
 }
