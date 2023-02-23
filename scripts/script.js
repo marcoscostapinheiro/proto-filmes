@@ -1,5 +1,5 @@
 var visibility = false
-var input = document.getElementById('isearch')
+var input = document.getElementById('search-box')
 var label = document.getElementById('ilabel')
 var menu = document.getElementById('icon-menu')
 var options = document.getElementById('options')
@@ -7,37 +7,47 @@ var options = document.getElementById('options')
 function reveal(clicked, target){
     if(visibility){
         target.style.display = 'none'
-        clicked.style.backgroundColor = 'black'
+        clicked.style.backgroundColor = 'transparent'
         clicked.style.color = 'white'
         clicked.style.borderRadius = '0'
         visibility = false
+        if(clicked === menu){
+            clicked.style.transform = 'rotate(0)'
+            clicked.style.padding = '5px 10px'
+        }
+        if(clicked === label){
+            label.innerText = 'search'
+        }
     }
     else{
-        clicked.style.borderRadius = '50% 50% 0 0'
-        clicked.style.backgroundColor = 'white'
+        clicked.style.backgroundColor = 'transparent'
         clicked.style.color = 'black'
+        clicked.style.backgroundColor = '#bd7708'
         target.style.display = 'block'
         visibility = true
+        if(clicked === menu){
+            clicked.style.transform = 'rotate(270deg)'
+        }
+        if(clicked === label){
+            label.innerText = 'search_off'
+        }
     }
 }
 
-label.addEventListener("mouseenter", () => {
+function mouseEnter(target){
     if(visibility === false){
-        label.style.backgroundColor = 'white'
-        label.style.cursor = 'pointer'
-        label.style.color = 'black'
-        label.style.borderRadius = '50%'
+        target.style.backgroundColor = 'white'
+        target.style.cursor = 'pointer'
+        target.style.color = 'black'
+        target.style.borderRadius = '5px'
     }
-})
+    
+}
 
-label.addEventListener("mouseout", () => {
+function mouseOut(target){
     if(visibility === false){
-        label.style.backgroundColor = 'black'
-        label.style.color = 'white'
-        label.style.borderRadius = '0'
+        target.style.backgroundColor = 'transparent'
+        target.style.color = 'white'
+        target.style.borderRadius = '0'
     }
-})
-
-menu.addEventListener("click", () => {
-
-})
+}

@@ -1,6 +1,6 @@
 body{
     height: 10000px;
-    background-color: rgb(54, 54, 54);
+    background-color: #1d2834;
 }
 
 header{
@@ -8,9 +8,10 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 80px;
-    background-color: black;
-    padding-top: 20px;
+    height: 60px;
+    background-image: linear-gradient(to bottom, #FFA719, #d68605);
+    padding-top: 10px;
+    z-index: 9;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.658);
 }
 
@@ -18,30 +19,27 @@ header > h1{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    margin: 5px 0px 0px 11px;
+    margin: 5px 0px 0px 17px;
     color: white;
+    font-family: Plexiglass;
+    font-size: 2em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.39);
     width: 250px;
 }
 
 #options{
     display: none;
     position: absolute;
-    top: 80%;
-    background-color: white;
-    width: 30vw;
-    height: 400px;
+    top: 100%;
+    background-color: #d68605;
+    color: white;
+    width: 100vw;
+    height: 100vh;
 }
 
 #icon-menu{
-    margin-top: 10px;
-    padding: 5px;
-}
-
-#icon-menu:hover{
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 1.8em;
 }
 
 li{
@@ -49,30 +47,58 @@ li{
 }
 
 .material-symbols-outlined{
-    margin-top: 12px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.384);
+    margin-top: 7px;
     color: white;
+    background-color: transparent;
 }
 
 label{
-    padding: 5px;
+    padding: 5px 10px;
     margin-left: 143px;
 }
 
-#isearch{
+#ilabel{
+    font-size: 1.8em;
+}
+
+#search-box{
     display: none;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d68605;
+}
+
+#isearch{
+    position: absolute;
+    left: 22%;
     border: 5px solid white;
-    border-radius: 5px 0 5px 5px;
     margin-left: 16px;
 }
 
+#btn-submit{
+    position: absolute;
+    left: 59%;
+    padding: 5px;
+    border: 0;
+}
+
 main{
-    width: 100%;
+    position: relative;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50%);
+    width: 95%;
     height: 10000px;
+    background-color: white;
 }
 
 main > video{
-    position: absolute;
-    top: 500%;
+    position: relative;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
