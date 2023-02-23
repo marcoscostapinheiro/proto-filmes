@@ -22,7 +22,7 @@ function reveal(clicked, target){
     else{
         clicked.style.backgroundColor = 'transparent'
         clicked.style.color = 'black'
-        clicked.style.backgroundColor = '#bd7708'
+        clicked.style.backgroundColor = '#31465f'
         target.style.display = 'block'
         visibility = true
         if(clicked === menu){
