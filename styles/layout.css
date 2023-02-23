@@ -70,25 +70,66 @@ label{
     background-color: #151e29;
 }
 
-
-
 main{
     position: relative;
     left: 50%;
     top: 60px;
     transform: translate(-50%);
-    width: 95%;
+    width: 100%;
     height: 10000px;
-    background-color: white;
+    background-color: #273646;
 }
 
-main > video{
+section{
     position: relative;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 305px;
+    transform: translate(-50%);
+    width: 90%;
 }
+
+#categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    padding-top: 20px;
+}
+
+#categories div{
+    height: 30px;
+    margin: 1px;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: #465f7a;
+    color: white;
+}
+
+#em-alta{
+    margin-top: 80px;
+}
+
+#em-alta > h2{
+    color: white;
+    margin-bottom: 10px;
+}
+
+#em-alta > h2 > span{
+    position: absolute;
+}
+
+#filmes-em-alta{
+    width: 1610px;
+}
+
+.filme-em-alta{
+    display: inline-block;
+}
+
+#em-alta img{
+    width: 130px;
+    height: 180px;
+}
+
 
 
