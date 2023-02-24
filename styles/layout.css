@@ -88,20 +88,40 @@ section{
 }
 
 #categories{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
-    height: 100px;
     padding-top: 20px;
 }
 
-#categories div{
-    height: 30px;
+#categories > h2{
+    color: white;
+    width: 140px;
+}
+
+#categories > h2 > span{
+    position: absolute;
+}
+
+#box-categories{
+    display: none;
+    background-color: #465f7a;
+
+}
+
+#categoria-filmes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#categoria-filmes div{
+    background-color: #364658;
     margin: 1px;
+}
+
+#categories div{
     padding: 5px;
     border-radius: 2px;
-    background-color: #465f7a;
     color: white;
 }
 
