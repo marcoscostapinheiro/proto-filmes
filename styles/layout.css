@@ -52,7 +52,6 @@ li{
 
 label{
     padding: 5px 10px;
-    margin-left: 143px;
 }
 
 #ilabel{
@@ -125,31 +124,34 @@ section{
     color: white;
 }
 
-#em-alta{
-    margin-top: 80px;
+.destaques{
+    margin-top: 30px;
     overflow-x: auto;
 }
 
-#em-alta > h2{
+.destaques > h2{
     color: white;
     margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
-#em-alta > h2 > span{
+.destaques > h2 > span{
     position: absolute;
+    margin-top: 2.5px;
 }
 
-#filmes-em-alta{
+.container-cards{
     width: 1610px;
 }
 
-.filme-em-alta{
+.cards{
     display: inline-block;
 }
 
-#em-alta img{
+.destaques img{
     width: 130px;
     height: 180px;
+    border-radius: 10px;
 }
 
 
