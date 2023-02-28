@@ -5,7 +5,6 @@ var menu = document.getElementById('icon-menu')
 var options = document.getElementById('options')
 var titleCategories = document.getElementById('title-categories')
 var categories = document.getElementById('box-categories')
-var arrow = document.getElementById('arrow')
 
 function reveal(clicked, target){
     if(visibility){
@@ -26,7 +25,6 @@ function reveal(clicked, target){
         if(clicked === titleCategories){
             clicked.style.backgroundColor = 'transparent'
             target.style.display = 'none'
-            arrow.innerText = 'chevron_right'
             visibility = false
         }
     }
@@ -48,7 +46,6 @@ function reveal(clicked, target){
         if(clicked === titleCategories){
             clicked.style.backgroundColor = '#465f7a'
             target.style.display = 'block'
-            arrow.innerText = 'expand_more'
             visibility = true
         }
     }
