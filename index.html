@@ -36,7 +36,13 @@
 
     <main>
         <section id="categories">
-            <h2 id="title-categories" onclick="reveal(titleCategories, categories)" onmouseenter="mouseEnter(titleCategories)" onmouseout="mouseOut(titleCategories)"> Categorias</h2>
+            <div id="expand-box"  onclick="reveal(expandBox, categories)" onmouseenter="mouseEnter(expandBox)" onmouseout="mouseOut(expandBox)">
+                <h2 id="title-categories">Categorias</h2>
+                <span class="material-symbols-outlined" id="arrow">
+                    chevron_right
+                </span>
+            </div>
+            
             <div id="box-categories">
                 <div id="categoria-filmes">
                     <div id="acao">Ação</div>
