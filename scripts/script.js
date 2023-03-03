@@ -92,16 +92,16 @@ function swapper(i, side){
             sum[i] += 269
         }
         else if(sum[i] === 1076){
-            target.style.transform += 'translateX(-190px)'
-            sum[i] += 190
+            target.style.transform += 'translateX(-210px)'
+            sum[i] += 210
         }
         
     }
     
     if(side === 'left'){
-        if(sum[i] === 1266){
-            target.style.transform += 'translateX(120px)'
-            sum[i] -= 190
+        if(sum[i] === 1286){
+            target.style.transform += 'translateX(210px)'
+            sum[i] -= 210
         }
         else if(sum[i] > 0){
             target.style.transform += 'translateX(269px)'
