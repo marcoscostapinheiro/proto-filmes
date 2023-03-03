@@ -6,6 +6,7 @@ var options = document.getElementById('options')
 var expandBox = document.getElementById('expand-box')
 var categories = document.getElementById('box-categories')
 var arrow = document.getElementById('arrow')
+var sum = [0, 0, 0, 0, 0, 0, 0, 0]
 
 function reveal(clicked, target){
     if(visibility){
@@ -83,15 +84,40 @@ function mouseOut(target){
 function swapper(i, side){
     let target = document.getElementsByClassName('container-cards')[i]
     let arrowLeft = document.getElementsByClassName('arrow-left')[i]
-    
+    let arrowRight = document.getElementsByClassName('arrow-right')[i]
+
     if(side === 'right'){
-        target.style.transform += 'translateX(-400px)'
+        if(sum[i] === 0){
+            target.style.transform += 'translateX(-404px)'
+            sum[i] += 404
+        }
+        else if(sum[i] === 404){
+            target.style.transform += 'translateX(-403px)'
+            sum[i] += 403
+        }
+        else if(sum[i] === 807){
+            target.style.transform += 'translateX(-370px)'
+            sum[i] += 370
+        }
     }
     
     if(side === 'left'){
-        target.style.transform += 'translateX(400px)'
+        if(sum[i] === 404){
+            target.style.transform += 'translateX(404px)'
+            sum[i] -= 404
+        }
+        else if(sum[i] === 807){
+            target.style.transform += 'translateX(403px)'
+            sum[i] -= 403
+        }
+        else if(sum[i] === 1177){
+            target.style.transform += 'translateX(370px)'
+            sum[i] -= 370
+        }
     }
 }
+
+
 
 
 

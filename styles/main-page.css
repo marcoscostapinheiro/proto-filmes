@@ -47,7 +47,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 #categoria-filmes div{
@@ -63,7 +62,7 @@ section{
 
 .destaques{
     margin-top: 30px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .destaques > .box-swap h2{
