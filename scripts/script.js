@@ -87,33 +87,26 @@ function swapper(i, side){
     let arrowRight = document.getElementsByClassName('arrow-right')[i]
 
     if(side === 'right'){
-        if(sum[i] === 0){
-            target.style.transform += 'translateX(-404px)'
-            sum[i] += 404
+        if(sum[i] < 1076){
+            target.style.transform += 'translateX(-269px)'
+            sum[i] += 269
         }
-        else if(sum[i] === 404){
-            target.style.transform += 'translateX(-403px)'
-            sum[i] += 403
+        else if(sum[i] === 1076){
+            target.style.transform += 'translateX(-100px)'
+            sum[i] += 100
         }
-        else if(sum[i] === 807){
-            target.style.transform += 'translateX(-370px)'
-            sum[i] += 370
-        }
+        
     }
     
     if(side === 'left'){
-        if(sum[i] === 404){
-            target.style.transform += 'translateX(404px)'
-            sum[i] -= 404
+        if(sum[i] === 1176){
+            target.style.transform += 'translateX(100px)'
+            sum[i] -= 100
         }
-        else if(sum[i] === 807){
-            target.style.transform += 'translateX(403px)'
-            sum[i] -= 403
-        }
-        else if(sum[i] === 1177){
-            target.style.transform += 'translateX(370px)'
-            sum[i] -= 370
-        }
+        else if(sum[i] > 0){
+            target.style.transform += 'translateX(269px)'
+            sum[i] -= 269
+        }  
     }
 }
 
