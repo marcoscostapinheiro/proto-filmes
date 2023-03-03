@@ -86,6 +86,17 @@ function swapper(i, side){
     let arrowLeft = document.getElementsByClassName('arrow-left')[i]
     let arrowRight = document.getElementsByClassName('arrow-right')[i]
 
+    if(side === 'left'){
+        if(sum[i] === 1286){
+            target.style.transform += 'translateX(210px)'
+            sum[i] -= 210
+        }
+        else if(sum[i] > 0){
+            target.style.transform += 'translateX(269px)'
+            sum[i] -= 269
+        }  
+    }
+
     if(side === 'right'){
         if(sum[i] < 1076){
             target.style.transform += 'translateX(-269px)'
@@ -97,18 +108,36 @@ function swapper(i, side){
         }
         
     }
-    
-    if(side === 'left'){
-        if(sum[i] === 1286){
-            target.style.transform += 'translateX(210px)'
-            sum[i] -= 210
-        }
-        else if(sum[i] > 0){
-            target.style.transform += 'translateX(269px)'
-            sum[i] -= 269
-        }  
+
+    if(sum[i] === 0){
+        arrowLeft.style.color = 'rgb(88, 88, 88)'
+    }
+    else if(sum[i] > 0 && sum[i] < 1286){
+        arrowLeft.style.color = 'white'
+    }
+
+    if(sum[i] >= 0 && sum[i] < 1286){
+        arrowRight.style.color = 'white'
+    }
+    else if(sum[i] >= 1286){
+        arrowRight.style.color = 'rgb(88, 88, 88)'
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

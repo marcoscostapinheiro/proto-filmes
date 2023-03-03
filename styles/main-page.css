@@ -93,3 +93,7 @@ section{
     height: 180px;
     border-radius: 10px;
 }
+
+.arrow-left{
+    color: rgb(88, 88, 88);
+}
