@@ -6,7 +6,7 @@ var options = document.getElementById('options')
 var expandBox = document.getElementById('expand-box')
 var categories = document.getElementById('box-categories')
 var arrow = document.getElementById('arrow')
-var sum = [0, 0, 0, 0, 0, 0, 0, 0]
+var sum = [0, 0, 0, 0, 0, 0, 0]
 
 function reveal(clicked, target){
     if(visibility){
