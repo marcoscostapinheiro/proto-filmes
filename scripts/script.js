@@ -79,3 +79,23 @@ function mouseOut(target){
         
     }
 }
+
+function swapper(i, side){
+    let target = document.getElementsByClassName('container-cards')[i]
+    let arrowLeft = document.getElementsByClassName('arrow-left')[i]
+    
+    if(side === 'right'){
+        target.style.transform += 'translateX(-400px)'
+    }
+    
+    if(side === 'left'){
+        target.style.transform += 'translateX(400px)'
+    }
+}
+
+
+
+
+
+
+
