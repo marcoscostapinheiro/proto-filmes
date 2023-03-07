@@ -4,8 +4,6 @@
 }
 
 #carousel #box-carousel{
-    position: relative;
-    left: 0%;
     display: flex;
     flex-direction: row;
     width: 600%;
@@ -15,7 +13,7 @@
 }
 
 #carousel #box-carousel img{
-    width: 100%;
+    width: 100vw;
     height: 25vh;
 }
 
