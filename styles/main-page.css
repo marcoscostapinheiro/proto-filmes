@@ -6,7 +6,7 @@
 #carousel #box-carousel{
     display: flex;
     flex-direction: row;
-    width: 600%;
+    width: 500%;
     animation-name: animation;
     animation-duration: 25s;
     animation-iteration-count: infinite;
