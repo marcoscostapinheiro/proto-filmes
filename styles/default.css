@@ -27,6 +27,8 @@ header > img{
     color: white;
     width: 100vw;
     height: 100vh;
+    text-align: center;
+    opacity: 0.98;
 }
 
 #icon-menu{
@@ -62,10 +64,49 @@ label{
     width: 100vw;
     height: 100vh;
     background-color: #151e29;
+    opacity: 0.98;
 }
 
 .material-symbols-outlined:hover{
     cursor: pointer;
+}
+
+main{
+    position: relative;
+    left: 50%;
+    top: 60px;
+    transform: translate(-50.1%);
+    width: 100%;
+    height: 100%;
+    background-color: #273646;
+    padding-bottom: 20px;
+}
+
+section{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+}
+
+footer{
+    padding: 75px 0px;
+    background-color: #151e29;
+    text-align: center;
+    color: white;
+}
+
+footer > h2{
+    margin-bottom: 10px;
+}
+
+footer img{
+    width: 35px;
+    color: white;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px;
+    padding: 1px;
 }
 
 

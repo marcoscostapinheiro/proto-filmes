@@ -1,73 +1,30 @@
-main{
-    position: relative;
-    left: 50%;
-    top: 60px;
-    transform: translate(-50%);
+#carousel{
     width: 100%;
-    height: 100%;
-    background-color: #273646;
+    overflow-x: hidden;
 }
 
-section{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 90%;
-}
-
-#categories{
-    width: 90%;
-    padding-top: 20px;
-    margin-left: -7px;
-}
-
-#categories > #expand-box{
-    width: 150px;
-}
-
-#categories > #expand-box > h2{
-    color: white;
-    display: inline-block;
-    width: 135px;
-}
-
-#categories >  #expand-box > .material-symbols-outlined{
-    margin-left: -18px;
-    font-size: 1em;
-    color: white;
-}
-
-#box-categories{
-    display: none;
-    background-color: #465f7a;
-
-}
-
-#categoria-filmes{
+#carousel #box-carousel{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    width: 600%;
+    animation-name: animation;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
 }
 
-#categoria-filmes div{
-    background-color: #364658;
-    margin: 1px;
-}
-
-#categories div{
-    padding: 5px;
-    border-radius: 2px;
-    color: white;
+#carousel #box-carousel img{
+    width: 100%;
+    height: 25vh;
 }
 
 .destaques{
-    margin-top: 30px;
+    padding-top: 40px;
     overflow-x: hidden;
 }
 
 .destaques > .box-swap h2{
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-size: 1.2em;
 }
 

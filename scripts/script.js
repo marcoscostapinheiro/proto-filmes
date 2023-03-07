@@ -3,8 +3,6 @@ var input = document.getElementById('search-box')
 var label = document.getElementById('ilabel')
 var menu = document.getElementById('icon-menu')
 var options = document.getElementById('options')
-var expandBox = document.getElementById('expand-box')
-var categories = document.getElementById('box-categories')
 var arrow = document.getElementById('arrow')
 var sum = [0, 0, 0, 0, 0, 0, 0]
 
@@ -18,17 +16,10 @@ function reveal(clicked, target){
             visibility = false
         }
         if(clicked === menu){
-            clicked.style.transform = 'rotate(0)'
-            clicked.style.padding = '5px 10px'
+            clicked.innerText = 'menu'
         }
         if(clicked === label){
             label.innerText = 'search'
-        }
-        if(clicked === expandBox){
-            clicked.style.backgroundColor = 'transparent'
-            target.style.display = 'none'
-            visibility = false
-            arrow.innerText = 'chevron_right'
         }
     }
     else{
@@ -39,18 +30,13 @@ function reveal(clicked, target){
             target.style.display = 'block'
             visibility = true
         }
-        
+
         if(clicked === menu){
-            clicked.style.transform = 'rotate(270deg)'
+            clicked.innerText = 'close'
         }
+        
         if(clicked === label){
             label.innerText = 'search_off'
-        }
-        if(clicked === expandBox){
-            clicked.style.backgroundColor = '#465f7a'
-            target.style.display = 'block'
-            visibility = true
-            arrow.innerText = 'expand_more'
         }
     }
 }
