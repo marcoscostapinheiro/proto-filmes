@@ -49,9 +49,6 @@ function mouseEnter(target){
             target.style.color = 'black'
             target.style.borderRadius = '5px'
         }
-        if(target === expandBox){
-            target.style.cursor = 'pointer'
-        }
     }
     
 }
@@ -67,7 +64,7 @@ function mouseOut(target){
     }
 }
 
-function swapper(i, side){
+function swapperBoxMovies(i, side){
     let target = document.getElementsByClassName('container-cards')[i]
     let arrowLeft = document.getElementsByClassName('arrow-left')[i]
     let arrowRight = document.getElementsByClassName('arrow-right')[i]
@@ -109,6 +106,7 @@ function swapper(i, side){
         arrowRight.style.color = 'rgb(88, 88, 88)'
     }
 }
+
 
 
 
