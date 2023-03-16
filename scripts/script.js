@@ -107,6 +107,56 @@ function swapperBoxMovies(i, side){
     }
 }
 
+function swapperBoxCaroussel(){
+    let selected = document.getElementsByClassName('teste')
+    let i = 0
+        
+    while(i < 6){
+        if(i === 0){   
+            selected[0].style.color = 'red'
+        }
+
+        if(i === 1){   
+            setTimeout(function(){
+                selected[0].style.color = 'black'
+                selected[1].style.color = 'red'
+            }, 4000)
+        }
+
+        if(i === 2){
+            setTimeout(function(){
+                selected[1].style.color = 'black'
+                selected[2].style.color = 'red'
+            }, 9000)
+        }
+
+        if(i === 3){
+            setTimeout(function(){
+                selected[2].style.color = 'black'
+                selected[3].style.color = 'red'
+            }, 14000)
+        }
+
+        if(i === 4){
+            setTimeout(function(){
+                selected[3].style.color = 'black'
+                selected[4].style.color = 'red'
+            }, 19000)
+        }
+
+        if(i === 5){
+            setTimeout(function(){
+                selected[0].style.color = 'red'
+                selected[4].style.color = 'black'
+            }, 24000)
+        }
+        i++
+    }
+
+}
+
+swapperBoxCaroussel()
+
 
 
 
