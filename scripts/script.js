@@ -1,9 +1,11 @@
 var visibility = false
-var input = document.getElementById('search-box')
-var label = document.getElementById('ilabel')
-var menu = document.getElementById('icon-menu')
-var options = document.getElementById('options')
-var arrow = document.getElementById('arrow')
+const input = document.getElementById('search-box')
+const label = document.getElementById('ilabel')
+const menu = document.getElementById('icon-menu')
+const options = document.getElementById('options')
+const arrow = document.getElementById('arrow')
+const boxCaroussel = document.getElementById('box-carousel')
+const teste = document.getElementsByClassName('teste')
 var sum = [0, 0, 0, 0, 0, 0, 0]
 
 function reveal(clicked, target){
@@ -107,55 +109,31 @@ function swapperBoxMovies(i, side){
     }
 }
 
-function swapperBoxCaroussel(){
+function swapperBoxCaroussel(i, jump){
     let selected = document.getElementsByClassName('teste')
-    let i = 0
-        
-    while(i < 6){
-        if(i === 0){   
-            selected[0].style.color = 'red'
-        }
+    teste[i].style.backgroundColor = 'black'
 
-        if(i === 1){   
-            setTimeout(function(){
-                selected[0].style.color = 'black'
-                selected[1].style.color = 'red'
-            }, 4000)
-        }
+    if(i !== 4){
+        setTimeout(function(){
+            teste[i].style.backgroundColor = 'transparent'
+            boxCaroussel.style.marginLeft = `${jump}%`
+            return swapperBoxCaroussel(i + 1, jump - 100)
+        }, 5000)
+    }
 
-        if(i === 2){
-            setTimeout(function(){
-                selected[1].style.color = 'black'
-                selected[2].style.color = 'red'
-            }, 9000)
-        }
-
-        if(i === 3){
-            setTimeout(function(){
-                selected[2].style.color = 'black'
-                selected[3].style.color = 'red'
-            }, 14000)
-        }
-
-        if(i === 4){
-            setTimeout(function(){
-                selected[3].style.color = 'black'
-                selected[4].style.color = 'red'
-            }, 19000)
-        }
-
-        if(i === 5){
-            setTimeout(function(){
-                selected[0].style.color = 'red'
-                selected[4].style.color = 'black'
-            }, 24000)
-        }
-        i++
+    else{
+        setTimeout(function(){
+            teste[i].style.backgroundColor = 'transparent'
+            boxCaroussel.style.marginLeft = '0'
+            return swapperBoxCaroussel(0, - 100)
+        }, 5000)
     }
 
 }
 
-swapperBoxCaroussel()
+swapperBoxCaroussel(0, -100)
+
+
 
 
 

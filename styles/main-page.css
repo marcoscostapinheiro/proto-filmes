@@ -14,14 +14,17 @@
     display: flex;
     flex-direction: row;
     width: 600%;
-    animation-name: animation;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
+    transition: margin 0.5s ease-in-out;
 }
 
 #carousel > #box-carousel img{
     width: 16.7%;
     height: 32vw;
+}
+
+#count-swap .material-symbols-outlined{
+    border-radius: 50%;
+    font-size: 0.5em;
 }
 
 .destaques{
