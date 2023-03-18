@@ -10,6 +10,10 @@
     transform: translate(-50%);
 }
 
+#carousel > #count-swap > .selected{
+    background-color: black;
+}
+
 #carousel #box-carousel{
     display: flex;
     flex-direction: row;
@@ -19,7 +23,7 @@
 
 #carousel > #box-carousel img{
     width: 16.7%;
-    height: 32vw;
+    height: 36vw;
 }
 
 #count-swap .material-symbols-outlined{

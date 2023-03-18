@@ -4,8 +4,10 @@ const label = document.getElementById('ilabel')
 const menu = document.getElementById('icon-menu')
 const options = document.getElementById('options')
 const arrow = document.getElementById('arrow')
-const boxCaroussel = document.getElementById('box-carousel')
+const boxCarousel = document.getElementById('box-carousel')
 const teste = document.getElementsByClassName('teste')
+var loaderClicked
+var loaderActual
 var sum = [0, 0, 0, 0, 0, 0, 0]
 
 function reveal(clicked, target){
@@ -109,29 +111,105 @@ function swapperBoxMovies(i, side){
     }
 }
 
-function swapperBoxCaroussel(i, jump){
+function Carousel(i, jump){
     let selected = document.getElementsByClassName('teste')
-    teste[i].style.backgroundColor = 'black'
+    teste[i].classList.add('selected')
+    loaderActual = i
+
+    if(loaderClicked !== undefined){
+        teste[loaderClicked].classList.remove('selected')
+    }
 
     if(i !== 4){
         setTimeout(function(){
-            teste[i].style.backgroundColor = 'transparent'
-            boxCaroussel.style.marginLeft = `${jump}%`
-            return swapperBoxCaroussel(i + 1, jump - 100)
+            teste[i].classList.remove('selected')
+            boxCarousel.style.marginLeft = `${jump}%`
+            return Carousel(i + 1, jump - 100.2)
         }, 5000)
     }
 
     else{
         setTimeout(function(){
-            teste[i].style.backgroundColor = 'transparent'
-            boxCaroussel.style.marginLeft = '0'
-            return swapperBoxCaroussel(0, - 100)
+            teste[i].classList.remove('selected')
+            boxCarousel.style.marginLeft = '0'
+            return Carousel(0, - 100.2)
         }, 5000)
     }
-
 }
 
-swapperBoxCaroussel(0, -100)
+function swapImage(target){
+    if(target === 0){
+        if(loaderClicked !== undefined){
+            teste[loaderClicked].classList.remove('selected')
+        }
+
+        if(loaderActual !== undefined){
+            teste[loaderActual].classList.remove('selected')
+        }
+
+        teste[target].classList.add('selected')
+        boxCarousel.style.marginLeft = '0'
+        loaderClicked = target
+    }
+
+    if(target === 1){
+        if(loaderClicked !== undefined){
+            teste[loaderClicked].classList.remove('selected')
+        }
+
+        if(loaderActual !== undefined){
+            teste[loaderActual].classList.remove('selected')
+        }
+        
+        teste[target].classList.add('selected')
+        boxCarousel.style.marginLeft = '-100.2%'
+        loaderClicked = target
+    }
+
+    if(target === 2){
+        if(loaderClicked !== undefined){
+            teste[loaderClicked].classList.remove('selected')
+        }
+
+        if(loaderActual !== undefined){
+            teste[loaderActual].classList.remove('selected')
+        }
+
+        teste[target].classList.add('selected')
+        boxCarousel.style.marginLeft = '-200.4%'
+        loaderClicked = target
+    }
+
+    if(target === 3){
+        if(loaderClicked !== undefined){
+            teste[loaderClicked].classList.remove('selected')
+        }
+
+        if(loaderActual !== undefined){
+            teste[loaderActual].classList.remove('selected')
+        }
+
+        teste[target].classList.add('selected')
+        boxCarousel.style.marginLeft = '-300.6%'
+        loaderClicked = target
+    }
+
+    if(target === 4){
+        if(loaderClicked !== undefined){
+            teste[loaderClicked].classList.remove('selected')
+        }
+
+        if(loaderActual !== undefined){
+            teste[loaderActual].classList.remove('selected')
+        }
+        
+        teste[target].classList.add('selected')
+        boxCarousel.style.marginLeft = '-400.8%'
+        loaderClicked = target
+    }
+}
+
+Carousel(0, -100.2)
 
 
 
