@@ -23,7 +23,7 @@
 
 #carousel > #box-carousel img{
     width: 16.7%;
-    height: 36vw;
+    max-height: 40vw;
 }
 
 #count-swap .material-symbols-outlined{

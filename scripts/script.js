@@ -116,7 +116,7 @@ function Carousel(i, jump){
     teste[i].classList.add('selected')
     loaderActual = i
 
-    if(loaderClicked !== undefined){
+    if(loaderClicked !== undefined && loaderClicked !== loaderActual){
         teste[loaderClicked].classList.remove('selected')
     }
 
